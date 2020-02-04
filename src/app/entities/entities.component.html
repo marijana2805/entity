@@ -1,0 +1,19 @@
+<h2 class="tittle">Add entities</h2>
+<div>
+  <mat-card>
+    <mat-icon>search</mat-icon>
+    <mat-form-field>
+      <label>
+        <input matInput placeholder="Search entity">
+      </label>
+    </mat-form-field>
+    <mat-divider></mat-divider>
+    <mat-list *ngFor="let item of entity; let lastItem = last;">
+      <mat-checkbox>
+        <b>{{item.name}}</b>
+        <br><a class="main">{{item.details}}</a>
+      </mat-checkbox>
+      <mat-divider *ngIf="!lastItem"></mat-divider>
+    </mat-list>
+  </mat-card>
+</div>
