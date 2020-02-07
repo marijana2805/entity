@@ -4,7 +4,7 @@
     <mat-icon>search</mat-icon>
     <mat-form-field>
       <label>
-        <input matInput placeholder="Search entity">
+        <input #Box matInput (keyup)="filterName(Box.value)" placeholder="Search entity"/>
       </label>
     </mat-form-field>
     <mat-divider></mat-divider>
