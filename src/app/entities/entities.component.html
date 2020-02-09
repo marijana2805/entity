@@ -1,8 +1,8 @@
 <h2 class="tittle">Add entities</h2>
 <div>
   <mat-card>
-    <mat-icon>search</mat-icon>
     <mat-form-field>
+      <mat-icon matPrefix>search</mat-icon>
       <label>
         <input #Box matInput (keyup)="filterName(Box.value)" placeholder="Search entity"/>
       </label>
