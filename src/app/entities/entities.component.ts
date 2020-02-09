@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Entity} from '../mock-list';
 import {EntitiesService} from '../entities.service';
-import {List} from '../list';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-entities',
@@ -11,6 +9,7 @@ import {Observable} from 'rxjs';
 })
 export class EntitiesComponent implements OnInit {
   entity = Entity;
+  searchName: string;
 
   constructor(private entitiesService: EntitiesService) {
   }

@@ -4,11 +4,11 @@
     <mat-form-field>
       <mat-icon matPrefix>search</mat-icon>
       <label>
-        <input #Box matInput (keyup)="filterName(Box.value)" placeholder="Search entity"/>
+        <input #Box matInput [(ngModel)]="searchName" placeholder="Search entity">
       </label>
     </mat-form-field>
     <mat-divider></mat-divider>
-    <mat-list *ngFor="let item of entity; let lastItem = last;">
+    <mat-list *ngFor="let item of entity | filter: searchName; let lastItem of entity">
       <mat-checkbox>
         <b>{{item.name}}</b>
         <br><a class="main">{{item.details}}</a>

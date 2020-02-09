@@ -16,11 +16,15 @@ import {
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntitiesComponent,
+    FilterPipe,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
