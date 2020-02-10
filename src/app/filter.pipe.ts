@@ -10,6 +10,5 @@ export class FilterPipe implements PipeTransform {
       return value;
     }
     return value.filter(item => item.name.toLowerCase().indexOf(args.toLowerCase()) > -1);
-
   }
 }

@@ -3,6 +3,9 @@ div {
   margin: 250px auto auto;
 }
 
-.mat-icon {
-
+button {
+  width: 350px;
+  text-align: left;
+  padding: 10px;
+  color: gray;
 }

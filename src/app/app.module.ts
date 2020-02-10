@@ -5,13 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule} from '@angular/material/slider';
 import { EntitiesComponent } from './entities/entities.component';
 import {
-  MatCardModule,
-  MatCheckboxModule,
-  MatDividerModule,
-  MatFormFieldModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule
+    MatButtonModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatDividerModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule
 } from '@angular/material';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
@@ -26,21 +27,22 @@ import { HomeComponent } from './home/home.component';
     FilterPipe,
     HomeComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatCheckboxModule,
-    MatCardModule,
-    MatDividerModule,
-    MatListModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatSliderModule,
+        MatCheckboxModule,
+        MatCardModule,
+        MatDividerModule,
+        MatListModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        MatButtonModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
