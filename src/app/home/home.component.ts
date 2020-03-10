@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {EntitiesService} from '../entities.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  private selectedList: any;
 
-  constructor() { }
-
-  ngOnInit() {
+  public constructor(private entitiesService: EntitiesService) {
   }
 
+  ngOnInit() {
+    this.selectedList = this.entitiesService.saved;
+    console.log(this.selectedList);
+  }
 }

@@ -1,8 +1,15 @@
 <nav>
-<div routerLink="/additem">
-    <button mat-raised-button>
-      <mat-icon matPrefix>add_circle_outline</mat-icon>
-      Connect entity
-    </button>
-</div>
+  <mat-card>
+    <mat-list>
+        <mat-list-item routerLink="/additem">
+          <mat-icon matPrefix>add_circle_outline</mat-icon>
+          Connect entity
+          ({{selectedList.length}})
+        </mat-list-item>
+      <mat-list-item *ngFor="let item of selectedList">
+        {{item.name}}
+        <br>{{item.details}}
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
 </nav>

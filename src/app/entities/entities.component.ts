@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Entity} from '../mock-list';
 import {EntitiesService} from '../entities.service';
+import {MatListOption} from '@angular/material';
 
 @Component({
   selector: 'app-entities',
@@ -10,29 +11,16 @@ import {EntitiesService} from '../entities.service';
 export class EntitiesComponent implements OnInit {
   entity = Entity;
   searchName: string;
+  newArr: any;
 
   constructor(private entitiesService: EntitiesService) {
   }
 
   ngOnInit() {
-    this.getEntities();
   }
 
-  getEntities(): void {
-    this.entitiesService.getEntity()
-      .subscribe(entity => this.entity = entity);
-  }
-
-  assignCopy() {
-    this.entity = Object.assign([], this.entity);
-  }
-
-  filterName(value) {
-    if (!value) {
-      this.assignCopy();
-    }
-    this.entity = Object.assign([], this.entity).filter(
-      entity => entity.name.toLowerCase().indexOf(value.toLowerCase()) > -1
-    );
+  onSave(opt: MatListOption[]) {
+    this.newArr = opt.map(o => o.value);
+    this.entitiesService.onSave(this.newArr);
   }
 }

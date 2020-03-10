@@ -1,11 +1,6 @@
-div {
+mat-card {
   width: 350px;
-  margin: 250px auto auto;
+  margin-top: 150px;
+  margin-left: 500px;
 }
 
-button {
-  width: 350px;
-  text-align: left;
-  padding: 10px;
-  color: gray;
-}

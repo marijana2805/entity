@@ -12,13 +12,14 @@ import {
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatListModule
+    MatListModule, MatTreeModule
 } from '@angular/material';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
 import { HomeComponent } from './home/home.component';
+import { EntitiesService} from './entities.service';
 
 @NgModule({
   declarations: [
@@ -42,8 +43,9 @@ import { HomeComponent } from './home/home.component';
         HttpClientModule,
         FormsModule,
         MatButtonModule,
+        MatTreeModule,
     ],
-  providers: [],
+  providers: [EntitiesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
