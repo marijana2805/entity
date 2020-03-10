@@ -12,6 +12,7 @@ export class EntitiesComponent implements OnInit {
   entity = Entity;
   searchName: string;
   newArr: any;
+  selected: boolean;
 
   constructor(private entitiesService: EntitiesService) {
   }
