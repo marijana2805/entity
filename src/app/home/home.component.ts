@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {EntitiesService} from '../entities.service';
+import {List} from '../list';
+import {ConnectService} from '../connect.service';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +9,17 @@ import {EntitiesService} from '../entities.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  private selectedList: any;
+  selectedList: List[] = [];
 
-  public constructor(private entitiesService: EntitiesService) {
+  public constructor(private entitiesService: EntitiesService,
+                     private connectService: ConnectService) {
   }
 
   ngOnInit() {
-    this.selectedList = this.entitiesService.saved;
-    console.log(this.selectedList);
+    this.getConnected();
+  }
+
+  getConnected(): void {
+    this.connectService.getChecked().subscribe(selectedList => this.selectedList = selectedList);
   }
 }
