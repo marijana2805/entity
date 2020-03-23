@@ -5,7 +5,7 @@
         <mat-icon matPrefix routerLink="/additem">add_circle_outline</mat-icon>
         Connect entity
         ({{selectedList.length}})
-        <button mat-button (click)="toggle()" id="bt">
+        <button mat-button (click)="toggle()" id="bt" *ngIf="selectedList.length>0">
           <mat-icon>{{buttonname}}</mat-icon>
         </button>
       </mat-list-item>

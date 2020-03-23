@@ -16,19 +16,19 @@
       "id": 3,
       "name": "Malntenance",
       "details": "Project",
-      "selected": true
+      "selected": false
     },
     {
       "id": 4,
       "name": "Customer Prayment",
       "details": "BPM",
-      "selected": false
+      "selected": true
     },
     {
       "id": 5,
       "name": "Arrivals Database",
       "details": "Database",
-      "selected": true
+      "selected": false
     },
     {
       "id": 6,
