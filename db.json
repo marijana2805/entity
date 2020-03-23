@@ -4,13 +4,13 @@
       "id": 1,
       "name": "Arrivals",
       "details": "BPM",
-      "selected": true
+      "selected": false
     },
     {
       "id": 2,
       "name": "Car Wash",
       "details": "BPM",
-      "selected": true
+      "selected": false
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "id": 6,
       "name": "Calculator",
       "details": "Application",
-      "selected": false
+      "selected": true
     },
     {
       "id": 7,

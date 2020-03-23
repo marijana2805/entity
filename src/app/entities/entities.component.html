@@ -1,11 +1,12 @@
 <h2 class="tittle">Add entities</h2>
 <div>
   <mat-card>
-    <mat-form-field>
+    <mat-form-field [style.width.px]=470 class="line">
       <mat-icon matPrefix>search</mat-icon>
       <label>
         <input matInput [(ngModel)]="searchName" placeholder="Search entity">
       </label>
+      <mat-icon matSuffix>filter_list</mat-icon>
     </mat-form-field>
     <mat-divider></mat-divider>
     <form>
